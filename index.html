@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curalyf - Clinical & Patient Care Platform Proposal</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284c7;
+            /* Sky 600 */
+            --secondary: #0ea5e9;
+            /* Sky 500 */
+            --surface: #ffffff;
+            --background: #f8fafc;
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --success: #16a34a;
+            --warning: #ca8a04;
+            --danger: #dc2626;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: var(--surface);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .meta-tag {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 28px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 4px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feature Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            border-color: var(--secondary);
+        }
+
+        .feature-card h3 {
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        /* Diagrams */
+        .diagram-container {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .diagram-caption {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Roadmap Steps */
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2rem;
+            font-weight: bold;
+        }
+
+        .steps h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="meta-tag">Advanced Digital Health Solution</div>
+            <h1>Curalyf Care Platform</h1>
+            <div class="subtitle">Detailed Clinical Implementation Strategy & Specification</div>
+        </header>
+
+        <section>
+            <h2>Clinical Objective: Closing the "Care Gap"</h2>
+            <p>
+                <strong>The Challenge:</strong> Post-discharge care is often fragmented. Patients lose access to
+                immediate professional guidance, leading to medication non-adherence (which accounts for ~50% of
+                treatment failures in chronic disease) and delayed responses to critical vital sign changes.
+            </p>
+            <p>
+                <strong>The Curalyf Solution:</strong> A comprehensive, integrated ecosystem designed to extend the
+                physician's reach into the patient's home. By combining <strong>intelligent automated triage</strong>
+                with <strong>direct physician oversight</strong>, Curalyf aims to reduce readmissions and improve
+                long-term clinical outcomes.
+            </p>
+        </section>
+
+        <section>
+            <h2>Clinical Workflows</h2>
+
+            <div class="diagram-container">
+                <span style="font-weight: 700; display: block; margin-bottom: 1rem; color: #334155;">Figure 1:
+                    Closed-Loop Medication Adherence</span>
+                <div class="mermaid">
+                    flowchart TD
+                    subgraph Patient_Home ["Patient Environment"]
+                    A["Rx Schedule Generated"] --> B{"Dose Time"}
+                    B -->|Notification| C["Patient Prompt"]
+                    C --> D{"Patient Action"}
+                    D -->|Confirmed| E["Log: Taken"]
+                    D -->|Missed > 1hr| F["Rule Engine Triggered"]
+                    F -->|Safe to Skip?| G["Automated Guidance"]
+                    end
+
+                    subgraph Physician_Office ["Doctor Control Tower"]
+                    E -.-> H[("Adherence Database")]
+                    G -.-> I["Alert: Missed Dose"]
+                    I --> J{"Physician Review"}
+                    J -->|Trend Poor?| K["Intervention Call"]
+                    end
+
+                    style F fill:#fef9c3,stroke:#eab308
+                    style K fill:#dcfce7,stroke:#16a34a
+                </div>
+                <span class="diagram-caption">The system automates routine compliance tracking, only escalating
+                    "exceptions" (missed doses, pattern changes) to the physician, maximizing efficiency.</span>
+            </div>
+
+            <div class="diagram-container">
+                <span style="font-weight: 700; display: block; margin-bottom: 1rem; color: #334155;">Figure 2:
+                    Intelligent Emergency Triage Protocol</span>
+                <div class="mermaid">
+                    flowchart TD
+                    V["Vitals Input (BP/HR/Glu)"] --> A{"Algorithmic Analysis"}
+
+                    A -->|Within Normal Limits| B["Record & Trend"]
+                    B --> C["Show Green Feedback"]
+
+                    A -->|Zone 2: Warning| D["Cautionary Protocol"]
+                    D --> E["Instruct: Rest 15m & Retest"]
+                    E --> F{"Retest Result"}
+                    F -->|Improved| B
+                    F -->|Persist/Worse| G
+
+                    A -->|Zone 3: Critical| G["EMERGENCY PROTOCOL"]
+                    G --> H["1. Patient SOS UI Overlay"]
+                    G --> I["2. SMS/Push to Physician"]
+                    G --> J["3. Notify Family Proxy"]
+
+                    style G fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+                </div>
+                <span class="diagram-caption">Multi-stage triage prevents alarm fatigue while ensuring critical
+                    deteriorations are caught immediately.</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Platform Components</h2>
+            <div class="grid">
+                <div class="feature-card">
+                    <h3>📱 Patient Companion App</h3>
+                    <ul>
+                        <li><strong>Regimen Clarity:</strong> Visual, time-based medication timeline. Eliminates
+                            confusion about "BID" or "QD".</li>
+                        <li><strong>Safe-Fail Logic:</strong> If a patient misses a dose, the app acts as a primary
+                            safety layer, advising whether to take it late or skip, based on pharmacologic rules.</li>
+                        <li><strong>One-Touch SOS:</strong> Immediate access to predefined emergency contacts and
+                            guidance.</li>
+                        <li><strong>Vitals Logging:</strong> Easy entry for home BP, Glucose, SpO2 with instant range
+                            feedback.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍⚕️ Physician "Control Tower" Dashboard</h3>
+                    <ul>
+                        <li><strong>Population Management:</strong> Sort entire patient panel by "Risk Score" (a
+                            composite of adherence and stability).</li>
+                        <li><strong>Adherence Heatmaps:</strong> Visualize patchy compliance instantly to discuss
+                            barriers during visits.</li>
+                        <li><strong>Trend Analysis:</strong> Correlate medication consistency with vital sign
+                            improvements (e.g., "BP stabilized after Adherence > 90%").</li>
+                        <li><strong>Direct Intervention:</strong> Push adjustments or notes directly to the patient's
+                            app.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Reliability & Compliance</h2>
+            <p>
+                Beyond clinical features, the platform is engineered for security and scalability, adhering to modern
+                standards comparable to banking systems.
+            </p>
+            <ul class="steps">
+                <li>
+                    <h4>Data Security & ABHA Readiness</h4>
+                    <p>Built on Supabase (PostgreSQL) with Row-Level Security (RLS). Prepared for integration with ABHA
+                        (Ayushman Bharat Health Account) for seamless interoperability with national health records.</p>
+                </li>
+                <li>
+                    <h4>Scalable Architecture</h4>
+                    <p>Designed using <strong>Next.js 16</strong> for rapid performance on any device (Smartphone to
+                        Desktop). The "Backend-First" approach ensures that as patient volume grows, the system remains
+                        fast and reliable.</p>
+                </li>
+                <li>
+                    <h4>Future-Proof AI Integration</h4>
+                    <p>The structured data collected today (Adherence + Vitals) lays the foundation for predictive
+                        analytics (Phase 5), allowing us to forecast complications before they happen.</p>
+                </li>
+            </ul>
+        </section>
+
+        <footer
+            style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e2e8f0; color: #64748b;">
+            <p>© 2025 Curalyf Health Systems. Confidential Implementation Proposal.</p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontFamily: 'Plus Jakarta Sans', primaryColor: '#e0f2fe', lineColor: '#0ea5e9' } });
+    </script>
+</body>
+
+</html>
